@@ -1,0 +1,19 @@
+<ul class="items">
+  <div class="element" *ngFor="let item of todoItems">
+    <input value="{{ item }}" #task/>
+    <button
+      mat-mini-fab
+      color=""
+      (click)="updateItem(item, task.value)"
+    >
+      <mat-icon>autorenew</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color=""
+      (click)="deleteItem(item)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</ul>
